@@ -11,14 +11,15 @@
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
     QMetaObject, QObject, QPoint, QRect,
     QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
+    QCursor, QFont, QFontDatabase, QGradient,
+    QIcon, QImage, QKeySequence, QLinearGradient,
+    QPainter, QPalette, QPixmap, QRadialGradient,
+    QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QGraphicsView, QHBoxLayout,
-    QLabel, QLineEdit, QMainWindow, QMenuBar,
-    QPushButton, QRadioButton, QSizePolicy, QStatusBar,
-    QVBoxLayout, QWidget)
+    QLabel, QLineEdit, QMainWindow, QMenu,
+    QMenuBar, QPushButton, QRadioButton, QSizePolicy,
+    QStatusBar, QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -27,6 +28,8 @@ class Ui_MainWindow(object):
         MainWindow.resize(517, 301)
         MainWindow.setStyleSheet(u"color: rgb(199, 168, 43);\n"
 "alternate-background-color: rgb(195, 161, 39);")
+        self.actionSalir = QAction(MainWindow)
+        self.actionSalir.setObjectName(u"actionSalir")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.widget = QWidget(self.centralwidget)
@@ -159,10 +162,15 @@ class Ui_MainWindow(object):
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
         self.menubar.setGeometry(QRect(0, 0, 517, 21))
+        self.Salir = QMenu(self.menubar)
+        self.Salir.setObjectName(u"Salir")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QStatusBar(MainWindow)
         self.statusbar.setObjectName(u"statusbar")
         MainWindow.setStatusBar(self.statusbar)
+
+        self.menubar.addAction(self.Salir.menuAction())
+        self.Salir.addAction(self.actionSalir)
 
         self.retranslateUi(MainWindow)
 
@@ -171,6 +179,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        self.actionSalir.setText(QCoreApplication.translate("MainWindow", u"Salir", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"PRIMERA APP", None))
         self.resultado.setText("")
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Numero 1", None))
@@ -180,5 +189,6 @@ class Ui_MainWindow(object):
         self.multiplicar.setText(QCoreApplication.translate("MainWindow", u"Multiplicar", None))
         self.dividir.setText(QCoreApplication.translate("MainWindow", u"Dividir", None))
         self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Calcular", None))
+        self.Salir.setTitle(QCoreApplication.translate("MainWindow", u"Cerrar", None))
     # retranslateUi
 

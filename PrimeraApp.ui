@@ -271,8 +271,20 @@ color: rgb(0, 0, 0);</string>
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="Salir">
+    <property name="title">
+     <string>Cerrar</string>
+    </property>
+    <addaction name="actionSalir"/>
+   </widget>
+   <addaction name="Salir"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSalir">
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
