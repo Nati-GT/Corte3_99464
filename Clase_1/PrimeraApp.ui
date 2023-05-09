@@ -79,7 +79,7 @@ font: 24pt &quot;MS Shell Dlg 2&quot;;</string>
       <x>60</x>
       <y>80</y>
       <width>231</width>
-      <height>141</height>
+      <height>121</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -174,7 +174,7 @@ color: rgb(6, 6, 6);</string>
       <x>290</x>
       <y>80</y>
       <width>121</width>
-      <height>141</height>
+      <height>121</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -192,53 +192,39 @@ color: rgb(6, 6, 6);</string>
        <x>20</x>
        <y>10</y>
        <width>86</width>
-       <height>119</height>
+       <height>96</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_4">
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_3">
         <item>
-         <widget class="QRadioButton" name="sumar">
+         <widget class="QRadioButton" name="radioButton">
           <property name="styleSheet">
            <string notr="true">color: rgb(6, 6, 6);</string>
           </property>
           <property name="text">
-           <string>Suma</string>
-          </property>
-          <property name="checked">
-           <bool>true</bool>
+           <string>RadioButton</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QRadioButton" name="restar">
+         <widget class="QRadioButton" name="radioButton_2">
           <property name="styleSheet">
            <string notr="true">color: rgb(12, 12, 12);</string>
           </property>
           <property name="text">
-           <string>Resta</string>
+           <string>RadioButton</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QRadioButton" name="multiplicar">
-          <property name="styleSheet">
-           <string notr="true">font: 75 8pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0);</string>
-          </property>
-          <property name="text">
-           <string>Multiplicar</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QRadioButton" name="dividir">
+         <widget class="QRadioButton" name="radioButton_3">
           <property name="styleSheet">
            <string notr="true">color: rgb(6, 6, 6);</string>
           </property>
           <property name="text">
-           <string>Dividir</string>
+           <string>RadioButton</string>
           </property>
          </widget>
         </item>
@@ -254,7 +240,7 @@ font: 75 8pt &quot;MS Shell Dlg 2&quot;;
 color: rgb(0, 0, 0);</string>
         </property>
         <property name="text">
-         <string>Calcular</string>
+         <string>PushButton</string>
         </property>
        </widget>
       </item>

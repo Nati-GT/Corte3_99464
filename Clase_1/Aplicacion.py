@@ -16,17 +16,8 @@ class Principal(PyQT.QMainWindow):
         self.pushButton.clicked.connect(self.calcular)
 
     def calcular(self):
-        texto1=float(self.num1.text())
-        texto2=float(self.num2.text())
-        
-        if self.sumar.isChecked()==True:
-            self.resultado.setText(str(texto1+texto2))
-        elif self.restar.isChecked()==True:
-            self.resultado.setText(str(texto1-texto2))
-        elif self.multiplicar.isChecked()==True:
-            self.resultado.setText(str(texto1*texto2))
-        else: 
-            self.resultado.setText(str(texto1/texto2))
+        texto1=self.num1.text()
+        self.resultado.setText(texto1)
     
 def main():
     app= PyQT.QApplication([])
